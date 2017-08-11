@@ -5,12 +5,26 @@ html, body{
     background-color: #edeef0;
 }
 
+.navbar{
+    margin-bottom: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.footer{
+    margin-bottom: : -100px;
+    height: 200px;
+    background-color: white;
+}
+
 .section-top{
     margin: 20px;
 }
 
 .product-item{
-    height: 230px;
+    height: 370px;
     background-color: white;
     border: 1px solid lightgrey;
     position: relative;
