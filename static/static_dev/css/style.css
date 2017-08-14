@@ -71,3 +71,7 @@ html, body{
     padding: 5px;
     margin-bottom: 5px;
 }
+
+.form-inline{
+    display: inline-block;
+}
