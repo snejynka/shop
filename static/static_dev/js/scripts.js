@@ -12,19 +12,36 @@ $(document).ready(function(){
         var price = submit_btn.data("price") // data-атрибуты добавляем в product.html 
         console.log(product_id);
         console.log(name);
-    })
+
+        $('.basket-items ul').append('<li>'+product_name+', ' + nmb +
+         'шт. ' + 'по ' + price + 'грн  ' + '<a class="delete-item" href="">x</a>' + 
+         '</li>');
+
+    });
+
+    function showingBasket(){
+        $('.basket-items').removeClass('hidden');//корзина в открытом виде
+    //    $('.basket-items').toggleClass('hidden');//корзина в закрытом виде
+    };
 
     $('.basket-container').on('click', function(e){
     	e.preventDefault();
-    	$('.basket-items').removeClass('hidden');
-    })
+    	showingBasket()
+    });
 
     $('.basket-container').mouseover(function(){
-    	$('.basket-items').removeClass('hidden');
-    })
+    	showingBasket()
+    });
 
-    $('.basket-container').mouseout(function(){
-    	$('.basket-items').addClass('hidden');
+    //$('.basket-container').mouseout(function(){
+    //    showingBasket()
+    //	//$('.basket-items').addClass('hidden');
+    //});
+
+    $(document).on('click', '.delete-item', function(e){
+        e.preventDefault();
+        $(this).closest('li').remove();
+        //для удаления из корзины
     })
 
 });
